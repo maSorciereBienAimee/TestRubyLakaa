@@ -20,7 +20,7 @@ L' affichage est a ameliorer (pas de gestion des overflow de page, affichage rud
 
 L' application doit recevoir des am'eliorations, notamment d' optimisation, et de securite.
 
-L'autorisation des CORS dans ruby, est actuellement sur *.
+
 
 Elle utilise une base de donnee possedant 2 tables, une pour les collectes et l' autre pour les indicateurs.
 chaques collectes pouvant avoir des indicateurs differents, la derniere colonne de la table collect recoit une string qui peut eventuellement contenir l' ensemble de indicateurs. J' ai trouve cette technique plus flexible et peut etre moins lourde qu' une relation many-to-many. Cela reste a discuter. On pourrait aussi parvenir a stocker l' information directement en json plutot que sous forme de string.
