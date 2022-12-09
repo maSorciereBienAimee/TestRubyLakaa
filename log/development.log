@@ -6359,3 +6359,49 @@ Processing by IndicatorsController#index as HTML
 Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1173)
 
 
+Started GET "/indicators?status=active" for ::1 at 2022-12-09 11:34:18 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicatorsController#index as HTML
+  Parameters: {"status"=>"active"}
+  [1m[36mIndicator Load (0.1ms)[0m  [1m[34mSELECT "indicators".* FROM "indicators" WHERE "indicators"."active" = ?[0m  [["active", 1]]
+  ↳ app/controllers/indicators_controller.rb:11:in `index'
+Completed 200 OK in 13ms (Views: 9.7ms | ActiveRecord: 0.3ms | Allocations: 7833)
+
+
+Started GET "/indicators?status=active" for ::1 at 2022-12-09 11:36:17 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IndicatorsController#index as HTML
+  Parameters: {"status"=>"active"}
+  [1m[36mIndicator Load (0.3ms)[0m  [1m[34mSELECT "indicators".* FROM "indicators" WHERE "indicators"."active" = ?[0m  [["active", 1]]
+  ↳ app/controllers/indicators_controller.rb:11:in `index'
+Completed 200 OK in 9ms (Views: 4.2ms | ActiveRecord: 0.6ms | Allocations: 7940)
+
+
+Started POST "/collects" for ::1 at 2022-12-09 11:36:28 +0100
+Processing by CollectsController#create as HTML
+  Parameters: {"at"=>"2022-12-02", "asso"=>"libe", "other"=>"{\"frf\":\"rrgheth\",\"www\":\"ddd\"}", "collect"=>{"at"=>"2022-12-02", "asso"=>"libe", "other"=>"{\"frf\":\"rrgheth\",\"www\":\"ddd\"}"}}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/collects_controller.rb:20:in `create'
+  [1m[36mCollect Create (0.2ms)[0m  [1m[32mINSERT INTO "collects" ("at", "asso", "other", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["at", "2022-12-02"], ["asso", "libe"], ["other", "{\"frf\":\"rrgheth\",\"www\":\"ddd\"}"], ["created_at", "2022-12-09 10:36:28.490732"], ["updated_at", "2022-12-09 10:36:28.490732"]]
+  ↳ app/controllers/collects_controller.rb:20:in `create'
+  [1m[36mTRANSACTION (163.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/collects_controller.rb:20:in `create'
+Completed 201 Created in 175ms (Views: 1.8ms | ActiveRecord: 164.5ms | Allocations: 7348)
+
+
+Started GET "/collects" for ::1 at 2022-12-09 11:36:32 +0100
+Started GET "/indicators" for ::1 at 2022-12-09 11:36:32 +0100
+Processing by IndicatorsController#index as HTML
+  [1m[36mIndicator Load (0.1ms)[0m  [1m[34mSELECT "indicators".* FROM "indicators"[0m
+  ↳ app/controllers/indicators_controller.rb:11:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1255)
+
+
+Processing by CollectsController#index as HTML
+  [1m[36mCollect Load (0.1ms)[0m  [1m[34mSELECT "collects".* FROM "collects"[0m
+  ↳ app/controllers/collects_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms | Allocations: 1403)
+
+
