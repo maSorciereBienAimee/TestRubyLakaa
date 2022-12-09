@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  at: 2022-12-09
+  asso: MyString
+  other: 
+
+two:
+  at: 2022-12-09
+  asso: MyString
+  other: 
