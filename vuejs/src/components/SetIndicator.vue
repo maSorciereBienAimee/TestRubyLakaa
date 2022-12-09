@@ -46,8 +46,7 @@ export default {
         }).catch((error) => { console.log(error) })
         el.value = 'true'
         el.innerHTML = 'true'
-      }
-      else {
+      } else {
         this.$axios.put(`http://localhost:3000/indicators/${id}`, {
           active: false
         }).catch((error) => { console.log(error) })

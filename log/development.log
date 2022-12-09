@@ -6313,3 +6313,49 @@ Processing by IndicatorsController#index as HTML
 Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 1173)
 
 
+Started GET "/indicators" for ::1 at 2022-12-09 11:02:31 +0100
+Started GET "/collects" for ::1 at 2022-12-09 11:02:31 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CollectsController#index as HTML
+Processing by IndicatorsController#index as HTML
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mIndicator Load (0.1ms)[0m  [1m[34mSELECT "indicators".* FROM "indicators"[0m
+  ↳ app/controllers/collects_controller.rb:8:in `index'
+  ↳ app/controllers/indicators_controller.rb:11:in `index'
+  [1m[36mCollect Load (0.1ms)[0m  [1m[34mSELECT "collects".* FROM "collects"[0m
+  ↳ app/controllers/collects_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 9.0ms | ActiveRecord: 0.5ms | Allocations: 13014)
+
+
+Completed 200 OK in 7ms (Views: 4.7ms | ActiveRecord: 0.3ms | Allocations: 6708)
+
+
+Started GET "/collects" for ::1 at 2022-12-09 11:02:53 +0100
+Processing by CollectsController#index as HTML
+  [1m[36mCollect Load (0.1ms)[0m  [1m[34mSELECT "collects".* FROM "collects"[0m
+  ↳ app/controllers/collects_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 1217)
+
+
+Started GET "/indicators" for ::1 at 2022-12-09 11:02:53 +0100
+Processing by IndicatorsController#index as HTML
+  [1m[36mIndicator Load (0.1ms)[0m  [1m[34mSELECT "indicators".* FROM "indicators"[0m
+  ↳ app/controllers/indicators_controller.rb:11:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 1176)
+
+
+Started GET "/collects" for ::1 at 2022-12-09 11:02:54 +0100
+Processing by CollectsController#index as HTML
+  [1m[36mCollect Load (0.2ms)[0m  [1m[34mSELECT "collects".* FROM "collects"[0m
+  ↳ app/controllers/collects_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1169)
+
+
+Started GET "/indicators" for ::1 at 2022-12-09 11:02:54 +0100
+Processing by IndicatorsController#index as HTML
+  [1m[36mIndicator Load (0.1ms)[0m  [1m[34mSELECT "indicators".* FROM "indicators"[0m
+  ↳ app/controllers/indicators_controller.rb:11:in `index'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1173)
+
+
