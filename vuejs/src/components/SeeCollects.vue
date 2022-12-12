@@ -1,9 +1,9 @@
 <template>
     <div class="max-w-sm m-auto my-8">
-    <div id="popup">
+    <div class="max-w-sm m-auto my-8" id="popup">
     <div class="max-w-sm m-auto my-8">
         <div class="border p-18 border-grey-light shadow rounder"
-        style="background-color:pink; margin-top:50%; margin-left:50%; height:400px; width:400px">
+        style="background-color:pink; top:50%; left:50%; height:400px; width:400px">
             <button v-on:click="modale" id="closeButton">X</button>
             <h3 class="text-2xt mb-6 text-grey-darkest">Set indicators</h3>
               <div v-for="item in indics" :key="item.id">
@@ -128,13 +128,18 @@ export default {
 
 <style>
 #popup {
-  position:fixed;
+  position:absolute;
   top:0;
   bottom:0;
   left:0;
   right:0;
+  width:100%;
+  margin:0;
+  padding:0;
   background-color:rgb(33,33,33,0.5);
   z-index:100000;
   display:none;
+  align-items: center;
+  justify-content:center;
 }
 </style>
