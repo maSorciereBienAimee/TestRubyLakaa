@@ -1,1 +1,1 @@
-rails s & cd vuejs && yarn dev &
+rails s & cd vuejs && yarn add @vue/cli && yarn dev &
