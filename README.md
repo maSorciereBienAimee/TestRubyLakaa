@@ -9,7 +9,7 @@ yarn 1.22.19
 Pour lancer l'application, lancer le backend depuis la racine avec la commande 
 $ rails s
 puis lancer le backend :
-$ cd vuejs && yarn dev
+$ cd vuejs && yarn add webpack-dev-server && yarn dev
 
 On peut egalement utiliser le script ./start
 Une fois lancee, rendez vous dans un navigateur sur l' addresse indiquee sur le terminal frontend.

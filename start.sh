@@ -1,1 +1,1 @@
-rails s & cd vuejs && npm install webpack-dev-server --save-dev && yarn dev
+rails s & cd vuejs && yarn add webpack-dev-server && yarn dev
